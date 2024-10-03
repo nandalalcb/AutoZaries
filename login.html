@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+<style>
+body {
+    background-image: url('Loginbg.jpg');
+    background-size: cover; /* or contain */
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #2e2727;
+  padding: 30px;
+  border-radius: 10px;
+  margin-right: -620px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #c00;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <form>
+        <h1>LOGIN</h1>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">Enter Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p> <a href="#">Forgot password?</a></p>
+    
+    <p>New to autozaries? <a href="signup.html" alt="website not found">Signup!</a></p>
+    
+  </div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

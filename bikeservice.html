@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="icon.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Vehicle Services</title>
+        <style>
+            body {
+                background-color: #000000ea;
+                color: rgb(79, 72, 72);
+                font-family: "Exo 2";
+                margin: 0;
+                padding: 0;
+            }
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background-image: url('headerbg.png');
+                background-size: cover;
+                background-position: center;
+                padding: 5px 10px;
+            }
+            .align {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+            }
+            .header img {
+                width: 200px;
+                height: 70px;
+            }
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transform: translateX(-10px) translateY(6.8px);
+                width: 101.32%;
+                background-color: #333333a9;
+                padding: 9px;
+                box-sizing: border-box;
+                margin: 0;
+                z-index: 10;
+            }
+            .nav a {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+                font-size: 16px;
+            }
+            .nav a:hover {
+                background-color: #4645458a;
+            }
+            .nav .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .nav .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #dcd5d5c3;
+                z-index: 9999;
+                min-width: 140px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .nav .dropdown-content a {
+                color: rgb(54, 52, 52);
+                padding: 10px 14px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                transition: background-color 0.3s;
+                font-size: 14px;
+            }
+            .nav .dropdown-content a:hover {
+                background-color: #d4cfcf;
+            }
+            .nav .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .search-container {
+                display: flex;
+                align-items: center;
+            }
+            .search-container input[type=text] {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 150px;
+            }
+            .search-container button {
+                padding: 8px;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+                background-color: #ff0000;
+                color: white;
+                border-radius: 5px;
+                margin-left: 5px;
+                transition: background-color 0.3s;
+            }
+            .search-container button:hover {
+                background-color: #931510;
+            }
+            .cart {
+                align-self: flex-end;
+            }
+            .cart img {
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+            }
+
+            /* Booking Form Styles */
+            .service-form {
+                max-width: 530px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: rgba(199, 192, 192, 0.841);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(87, 85, 85, 0.1);
+            }
+            .service-form h2 {
+                color: rgb(94, 91, 91);
+            }
+            .service-form label {
+                display: block;
+                margin-bottom: 8px;
+                margin-right: 8px;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .service-form input, .service-form select, .service-form textarea {
+                width: 98%;
+                padding: 6px;
+                margin-bottom: 20px;
+                border: 1px solid #b7b5b5;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .service-form button {
+                background-color: #931510;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .service-form button:hover {
+                transition: ease-in-out 0.3s;
+                
+                background-color: #ff0000;
+            }
+
+            .service-form .issue-field {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="align">
+                <a href="homepage.html"><img src="logo.png" alt="Logo"></a> 
+            </div>
+        <!-- Navigation bar -->
+        <nav class="nav">
+            <div class="dropdown">
+                <a href="#">Cars</a>
+                <div class="dropdown-content">
+                    <a href="#">Car Accessories</a>
+                    <a href="#">Spare Parts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Bikes</a>
+                <div class="dropdown-content">
+                    <a href="#">Bike Accessories</a>
+                    <a href="#">Spare Parts</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">Pickup/Drop Servicing</a>
+                    <a href="#">Periodic Service</a>
+                    <a href="#">Maintenance</a>
+                    <a href="#">Regular Service</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Riding Gears</a>
+                <div class="dropdown-content">
+                    <a href="#">Gloves</a>
+                    <a href="#">Hand Sleeves</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Padding</a>
+                    <a href="#">Riding Boots</a>
+                    <a href="#">Riding Pants</a>
+                    <a href="#">Combo Suits</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Helmets & Accessories</a>
+                <div class="dropdown-content">
+                    <a href="#">Axor</a>
+                    <a href="#">Axxis</a>
+                    <a href="#">MT</a>
+                    <a href="#">SMK</a>
+                    <a href="#">Vega</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Combos</a>
+                <div class="dropdown-content">
+                    <a href="#">Riding Gear Combos</a>
+                    <a href="#">Accessories Combo</a>
+                </div>
+            </div>
+            <div class="search-container">
+                <form action="#">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="cart">
+                <a href="#"><img src="cart.png" alt="Cart"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Service Booking Form -->
+        <form class="service-form" action="#" method="post">
+            <h2>Service Booking</h2>
+
+            <label for="customer-name">Customer Name:</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+
+            <label for="vehicle">Vehicle:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="car">Car</option>
+                <option value="bike">Bike</option>
+            </select>
+
+            <label for="vehicle-type">Vehicle Type:</label>
+            <input type="text" id="vehicle-type" name="vehicle-type" required>
+
+            <label for="vehicle-registration">Vehicle Registration Number:</label>
+            <input type="text" id="vehicle-registration" name="vehicle-registration" required>
+
+            <label for="service-type">Type of Service:</label>
+            <select id="service-type" name="service-type" required onchange="toggleIssueField()">
+                <option value="periodic">Periodic Service</option>
+                <option value="general">General Service</option>
+            </select>
+
+            <div class="issue-field">
+                <label for="issue">Issue (for General Service):</label>
+                <textarea id="issue" name="issue" rows="3"></textarea>
+            </div>
+
+            <button type="submit">Confirm Service Booking</button>
+        </form>
+    </main>
+
+    <script>
+        function toggleIssueField() {
+            var serviceType = document.getElementById('service-type').value;
+            var issueField = document.querySelector('.issue-field');
+            if (serviceType === 'general') {
+                issueField.style.display = 'block';
+            } else {
+                issueField.style.display = 'none';
+            }
+        }
+    </script>
+    </body>
+</html>
